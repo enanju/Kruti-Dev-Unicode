@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kruti Dev ⇄ Unicode Converter (offline)</title>
+<style>body{font-family:system-ui,sans-serif;max-width:900px;margin:24px auto;padding:0 16px;background:#fff;color:#111}textarea{width:100%;min-height:180px;font-size:16px;box-sizing:border-box;padding:10px}button{padding:8px 14px;margin:8px 8px 8px 0}</style></head>
+<body>
+<h1>Kruti Dev ⇄ Unicode Converter</h1>
+<p>Offline demo of this library. For the full tool with copy buttons and tips use the <a href="https://smallseotoolspro.com/addons/krutidev-unicode-converter/">online Kruti Dev to Unicode Converter</a>.</p>
+<textarea id="in">Hkkjr ,d fo'kky ns'k gSA</textarea>
+<div><button id="k2u">Kruti Dev → Unicode</button><button id="u2k">Unicode → Kruti Dev</button></div>
+<textarea id="out" readonly></textarea>
+<script src="krutidev.js"></script>
+<script>
+document.getElementById('k2u').onclick = function () { document.getElementById('out').value = KrutiDev.krutiDevToUnicode(document.getElementById('in').value); };
+document.getElementById('u2k').onclick = function () { document.getElementById('out').value = KrutiDev.unicodeToKrutiDev(document.getElementById('in').value); };
+</script>
+</body></html>
